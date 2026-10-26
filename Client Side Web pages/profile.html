@@ -19,7 +19,11 @@ nav{flex-direction:column;gap:15px}
 nav a{font-size:12px}
 }
 </style>
-    <script src="auth.js"></script>
+    <script>
+        if (sessionStorage.getItem("screenBoxAuthenticated") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
 </head>
 
 <body>
