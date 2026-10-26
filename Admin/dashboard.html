@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Screen Box - Admin Dashboard</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{background:#000;color:#fff}
+nav{
+padding:18px 5%;display:flex;
+justify-content:space-between;align-items:center;
+border-bottom:1px solid #333
+}
+nav a{color:#fff;text-decoration:none;margin:0 8px}
+.logo{font-size:25px}
+.container{width:90%;max-width:1100px;margin:40px auto}
+h1{text-align:center;margin-bottom:30px}
+.cards{
+display:grid;grid-template-columns:repeat(4,1fr);gap:20px
+}
+.card{
+background:#111;border:1px solid #333;
+padding:30px;text-align:center
+}
+.card h2{margin-bottom:10px}
+button{
+padding:10px 18px;margin-top:15px;
+border:0;cursor:pointer
+}
+@media(max-width:800px){
+.cards{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:500px){
+nav{flex-direction:column;gap:15px}
+.cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<b class="logo">SCREEN BOX ADMIN</b>
+
+<div>
+<a href="dashboard.html">Dashboard</a>
+<a href="manage-movies.html">Movies</a>
+<a href="manage-users.html">Users</a>
+<a href="admin-login.html">Logout</a>
+</div>
+</nav>
+
+<div class="container">
+
+<h1>Admin Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Movies</h2>
+<p>25 Movies</p>
+<button onclick="location.href='manage-movies.html'">Manage</button>
+</div>
+
+<div class="card">
+<h2>TV Shows</h2>
+<p>15 Shows</p>
+<button onclick="location.href='manage-tv-shows.html'">Manage</button>
+</div>
+
+<div class="card">
+<h2>Sports</h2>
+<p>10 Events</p>
+<button onclick="location.href='manage-sports.html'">Manage</button>
+</div>
+
+<div class="card">
+<h2>Users</h2>
+<p>120 Users</p>
+<button onclick="location.href='manage-users.html'">Manage</button>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

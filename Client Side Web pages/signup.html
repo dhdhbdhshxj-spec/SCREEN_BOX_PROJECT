@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Box - Sign Up</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-box {
+            width: 400px;
+            padding: 35px;
+            background: #111;
+            border: 1px solid #555;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin: 8px 0;
+            background: #222;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ccc;
+        }
+
+        .login-link {
+            display: block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        @media (max-width: 500px) {
+            .signup-box {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-box">
+
+        <div class="logo">SCREEN BOX</div>
+
+        <p class="subtitle">Create your account</p>
+
+        <form onsubmit="signup(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+            >
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                required
+            >
+
+            <button type="submit">CREATE ACCOUNT</button>
+
+        </form>
+
+        <a href="login.html" class="login-link">
+            Already have an account? Login
+        </a>
+
+    </div>
+
+    <script>
+        function signup(event) {
+            event.preventDefault();
+
+            let password = document.getElementById("password").value;
+            let confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            alert("Account created successfully!");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>

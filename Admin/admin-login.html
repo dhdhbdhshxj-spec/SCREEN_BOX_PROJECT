@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Screen Box - Admin Login</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{background:#000;color:#fff}
+.box{
+width:90%;max-width:400px;margin:100px auto;
+background:#111;padding:35px;border:1px solid #333
+}
+h1{text-align:center;margin-bottom:25px}
+input{
+width:100%;padding:12px;margin:10px 0;
+background:#222;color:#fff;border:1px solid #555
+}
+button{
+width:100%;padding:12px;margin-top:15px;
+border:0;cursor:pointer
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1>SCREEN BOX</h1>
+
+<input id="user" placeholder="Admin Username">
+<input id="pass" type="password" placeholder="Password">
+
+<button onclick="login()">Admin Login</button>
+</div>
+
+<script>
+function login(){
+let u=document.getElementById("user").value;
+let p=document.getElementById("pass").value;
+
+if(u=="admin" && p=="1234"){
+alert("Login Successful!");
+location.href="dashboard.html";
+}else{
+alert("Invalid Username or Password!");
+}
+}
+</script>
+
+</body>
+</html>

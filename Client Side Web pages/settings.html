@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Screen Box - Settings</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{background:#000;color:#fff}
+nav{padding:18px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}
+nav a{color:#fff;text-decoration:none;margin:0 7px;font-size:14px}
+.logo{font-size:25px}
+.settings{width:90%;max-width:600px;margin:50px auto;background:#111;padding:30px;border:1px solid #333}
+h1{text-align:center;margin-bottom:30px}
+.item{padding:18px 0;border-bottom:1px solid #333}
+label{display:block;margin-bottom:8px}
+input,select{width:100%;padding:10px;background:#222;color:#fff;border:1px solid #555}
+button{padding:11px 20px;margin-top:25px;border:0;cursor:pointer}
+@media(max-width:600px){
+nav{flex-direction:column;gap:15px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<b class="logo">SCREEN BOX</b>
+<div>
+<a href="home.html">Home</a>
+<a href="movies.html">Movies</a>
+<a href="tv-shows.html">TV Shows</a>
+<a href="sports.html">Sports</a>
+<a href="search.html">Search</a>
+<a href="watchlist.html">Watchlist</a>
+</div>
+<a href="profile.html">Profile</a>
+</nav>
+
+<div class="settings">
+<h1>Settings</h1>
+
+<div class="item">
+<label>Email</label>
+<input type="email" value="rudra@example.com">
+</div>
+
+<div class="item">
+<label>Language</label>
+<select>
+<option>English</option>
+<option>Hindi</option>
+</select>
+</div>
+
+<div class="item">
+<label>Video Quality</label>
+<select>
+<option>Auto</option>
+<option>1080p</option>
+<option>720p</option>
+<option>480p</option>
+</select>
+</div>
+
+<button onclick="save()">Save Changes</button>
+</div>
+
+<script>
+function save(){
+alert("Settings saved successfully!");
+}
+</script>
+
+</body>
+</html>

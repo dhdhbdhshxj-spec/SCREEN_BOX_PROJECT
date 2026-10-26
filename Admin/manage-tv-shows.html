@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin - Manage TV Shows</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{background:#000;color:#fff}
+nav{padding:18px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}
+nav a{color:#fff;text-decoration:none;margin:0 8px}
+.logo{font-size:22px}
+.container{width:90%;max-width:1000px;margin:40px auto}
+h1{text-align:center;margin-bottom:25px}
+button{padding:10px 15px;border:0;cursor:pointer}
+table{width:100%;margin-top:25px;border-collapse:collapse}
+th,td{padding:14px;border:1px solid #444;text-align:center}
+@media(max-width:600px){
+nav{flex-direction:column;gap:15px}
+table{font-size:12px}
+th,td{padding:8px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<b class="logo">SCREEN BOX ADMIN</b>
+<div>
+<a href="dashboard.html">Dashboard</a>
+<a href="manage-movies.html">Movies</a>
+<a href="manage-users.html">Users</a>
+<a href="admin-login.html">Logout</a>
+</div>
+</nav>
+
+<div class="container">
+
+<h1>Manage TV Shows</h1>
+
+<button onclick="addShow()">+ Add TV Show</button>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Show Name</th>
+<th>Genre</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>TV Show One</td>
+<td>Drama</td>
+<td>
+<button onclick="edit()">Edit</button>
+<button onclick="removeShow()">Delete</button>
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>TV Show Two</td>
+<td>Comedy</td>
+<td>
+<button onclick="edit()">Edit</button>
+<button onclick="removeShow()">Delete</button>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<script>
+function addShow(){alert("Add TV Show option selected!")}
+function edit(){alert("Edit TV Show selected!")}
+function removeShow(){alert("TV Show deleted!")}
+</script>
+
+</body>
+</html>

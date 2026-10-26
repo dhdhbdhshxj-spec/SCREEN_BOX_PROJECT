@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Box - Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+        body{background:#000;color:white}
+
+        nav{
+            padding:18px 5%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-bottom:1px solid #333
+        }
+
+        .logo{font-size:25px;font-weight:bold}
+        nav a{color:white;text-decoration:none;margin:0 8px;font-size:14px}
+
+        .page{padding:40px 5%}
+
+        .search{
+            display:flex;
+            gap:10px;
+            margin:25px 0 35px;
+            max-width:600px
+        }
+
+        input{
+            flex:1;
+            padding:13px;
+            background:#111;
+            color:white;
+            border:1px solid #555;
+            border-radius:5px
+        }
+
+        button{
+            padding:13px 20px;
+            background:white;
+            color:black;
+            border:0;
+            border-radius:5px;
+            cursor:pointer
+        }
+
+        .results{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px
+        }
+
+        .card{
+            background:#111;
+            border:1px solid #444;
+            border-radius:8px;
+            padding:20px;
+            min-height:180px
+        }
+
+        .card p{
+            color:#aaa;
+            margin:10px 0 15px;
+            font-size:13px
+        }
+
+        @media(max-width:900px){
+            .results{grid-template-columns:repeat(2,1fr)}
+        }
+
+        @media(max-width:600px){
+            nav{flex-direction:column;gap:15px}
+            .search{flex-direction:column}
+            .results{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <b class="logo">SCREEN BOX</b>
+
+    <div>
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="tv-shows.html">TV Shows</a>
+        <a href="sports.html">Sports</a>
+        <a href="search.html">Search</a>
+        <a href="watchlist.html">Watchlist</a>
+    </div>
+
+    <a href="profile.html">Profile</a>
+</nav>
+
+<div class="page">
+
+    <h1>Search</h1>
+
+    <div class="search">
+        <input id="search" placeholder="Search movies, shows or sports">
+        <button onclick="search()">Search</button>
+    </div>
+
+    <div class="results" id="results">
+
+        <div class="card">
+            <h3>Movie One</h3>
+            <p>Action • Movie</p>
+            <button onclick="openContent()">View</button>
+        </div>
+
+        <div class="card">
+            <h3>TV Show One</h3>
+            <p>Drama • TV Show</p>
+            <button onclick="openContent()">View</button>
+        </div>
+
+        <div class="card">
+            <h3>Formula 1</h3>
+            <p>Sports • Live</p>
+            <button onclick="openContent()">View</button>
+        </div>
+
+        <div class="card">
+            <h3>Movie Two</h3>
+            <p>Comedy • Movie</p>
+            <button onclick="openContent()">View</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function search(){
+        let text=document.getElementById("search").value;
+
+        if(text=="")
+            alert("Please enter something to search!");
+        else
+            alert("Searching for: "+text);
+    }
+
+    function openContent(){
+        location.href="content-details.html";
+    }
+</script>
+
+</body>
+</html>

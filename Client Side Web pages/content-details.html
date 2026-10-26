@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Box - Content Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+        body{background:#000;color:white}
+
+        nav{
+            padding:18px 5%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-bottom:1px solid #333
+        }
+
+        .logo{font-size:25px;font-weight:bold}
+        nav a{color:white;text-decoration:none;margin:0 8px;font-size:14px}
+
+        .content{
+            padding:50px 8%;
+            display:flex;
+            gap:40px;
+            align-items:center
+        }
+
+        .poster{
+            width:300px;
+            height:400px;
+            background:#222;
+            border:1px solid #555;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#888
+        }
+
+        .info{max-width:600px}
+        .info h1{font-size:40px;margin-bottom:15px}
+        .info p{color:#aaa;line-height:1.6;margin:12px 0}
+
+        button{
+            padding:12px 20px;
+            margin:10px 8px 0 0;
+            border:0;
+            border-radius:5px;
+            cursor:pointer
+        }
+
+        .watch{background:white;color:black}
+        .list{background:#222;color:white;border:1px solid #555}
+
+        @media(max-width:700px){
+            nav{flex-direction:column;gap:15px}
+            .content{flex-direction:column;text-align:center}
+            .poster{width:250px;height:330px}
+            .info h1{font-size:30px}
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <b class="logo">SCREEN BOX</b>
+
+    <div>
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="tv-shows.html">TV Shows</a>
+        <a href="sports.html">Sports</a>
+        <a href="search.html">Search</a>
+        <a href="watchlist.html">Watchlist</a>
+    </div>
+
+    <a href="profile.html">Profile</a>
+</nav>
+
+<div class="content">
+
+    <div class="poster">
+        Movie Poster
+    </div>
+
+    <div class="info">
+
+        <h1>Movie One</h1>
+
+        <p>
+            Action • 2026 • 2h 10m
+        </p>
+
+        <p>
+            A sample movie description for Screen Box.
+            Enjoy your favorite movies and entertainment
+            all in one place.
+        </p>
+
+        <button class="watch" onclick="watch()">
+            ▶ Watch Now
+        </button>
+
+        <button class="list" onclick="addList()">
+            + Add to Watchlist
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+    function watch(){
+        location.href="video-player.html";
+    }
+
+    function addList(){
+        alert("Added to Watchlist!");
+    }
+</script>
+
+</body>
+</html>

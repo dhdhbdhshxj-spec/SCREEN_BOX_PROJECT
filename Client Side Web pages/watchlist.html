@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Screen Box - Watchlist</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{background:#000;color:#fff}
+nav{padding:18px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333}
+nav a{color:#fff;text-decoration:none;margin:0 7px;font-size:14px}
+.logo{font-size:25px}
+h1{text-align:center;margin:40px}
+.list{width:90%;max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#111;padding:20px;text-align:center;border:1px solid #333}
+.img{height:150px;background:#222;display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+button{padding:10px 15px;margin-top:12px;border:0;cursor:pointer}
+@media(max-width:800px){.list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){nav{flex-direction:column;gap:15px}.list{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+
+<nav>
+<b class="logo">SCREEN BOX</b>
+<div>
+<a href="home.html">Home</a>
+<a href="movies.html">Movies</a>
+<a href="tv-shows.html">TV Shows</a>
+<a href="sports.html">Sports</a>
+<a href="search.html">Search</a>
+<a href="watchlist.html">Watchlist</a>
+</div>
+<a href="profile.html">Profile</a>
+</nav>
+
+<h1>My Watchlist</h1>
+
+<div class="list">
+<div class="card"><div class="img">Movie Image</div><h3>Movie One</h3><button onclick="watch()">Watch</button></div>
+<div class="card"><div class="img">Show Image</div><h3>TV Show One</h3><button onclick="watch()">Watch</button></div>
+<div class="card"><div class="img">Sports Image</div><h3>Formula 1</h3><button onclick="watch()">Watch</button></div>
+<div class="card"><div class="img">Movie Image</div><h3>Movie Two</h3><button onclick="watch()">Watch</button></div>
+</div>
+
+<script>
+function watch(){
+location.href="content-details.html";
+}
+</script>
+
+</body>
+</html>
