@@ -131,6 +131,7 @@
             let password = document.getElementById("password").value;
 
             if (email && password) {
+                sessionStorage.setItem("screenBoxAuthenticated", "true");
                 alert("Login Successful!");
                 window.location.href = "home.html";
             }
